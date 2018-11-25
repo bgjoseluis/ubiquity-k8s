@@ -1,6 +1,6 @@
 # IBM Spectrum Scale
 
-IBM Spectrum Scale can be used as persistent storage for Kubernetes via Ubiquity service. Ubiquity communicates with the IBM Spectrum Scale through IBM Spectrum Scale management api version 2.0. Filesets are created on IBM Spectrum Scale and made available for Ubiquity FlexVolume and Ubiquity Dynamic Provisioner. Available IBM block storage systems for Ubiquity FlexVolume and Ubiquity Dynamic Provisioner are listed in the [Ubiquity Service](https://github.com/IBM/ubiquity/).
+IBM Spectrum Scale can be used as persistent storage for Kubernetes via Ubiquity service. Ubiquity communicates with the IBM Spectrum Scale through IBM Spectrum Scale management api version 2.0. Filesets are created on IBM Spectrum Scale and made available for Ubiquity FlexVolume and Ubiquity Dynamic Provisioner.
 
 # Usage examples for Ubiquity Dynamic Provisioner and FlexVolume
 The IBM official solution for Kubernetes, based on the Ubiquity project, is referred to as IBM Storage Enabler for Containers. You can download the installation package and its documentation (including full usage examples) from [IBM Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=Software%2Bdefined%2Bstorage&product=ibm/StorageSoftware/IBM+Spectrum+Connect&release=All&platform=Linux&function=all).
@@ -12,7 +12,7 @@ Usage examples index:
 
 ## Example 1 : Basic flow for running a stateful container with Ubiquity volume
 Flow overview:
-1. Create a StorageClass `spectrumscale-primaryfs` that refers to Spectrumscale filesysten `primaryfs`.
+1. Create a StorageClass `spectrumscale-primaryfs` that refers to Spectrum Scale filesysten `primaryfs`.
 2. Create a PVC `pvc1` that uses the StorageClass `spectrumscale-primaryfs`.
 3. Create a Pod `pod1` with container `container1` that uses PVC `pvc1`.
 3. Start I/Os into `/data/myDATA` in `pod1\container1`.
@@ -128,12 +128,13 @@ persistentvolumeclaim "pvc1" deleted
 storageclass "spectrumscale-primaryfs" deleted
 ```
 
-# Example 2 : Basic flow breakdown
+
+## Example 2 : Basic flow breakdown
 This section describes separate steps of the generic flow in greater detail.
 
 
 ### Creating a Storage Class
-For example, to create a Storage Class named `spectrumscale-primaryfs` that refers to a Spectrumscale filesystem `primaryfs` with fileset quota enabled. As a result, every volume from this storage class will be provisioned on the Spectrum scale and each volume is a fileset in a Spectrumscale filesystem.
+For example, to create a Storage Class named `spectrumscale-primaryfs` that refers to a Spectrum Scale filesystem `primaryfs` with fileset quota enabled. As a result, every volume from this storage class will be provisioned on the Spectrum  Scale and each volume is a fileset in a Spectrum Scale filesystem.
 ```bash
 #> cat storage-class-primaryfs.yml
 kind: StorageClass
@@ -264,12 +265,6 @@ For example:
 #> kubectl delete -f storage-class-primaryfs.yml
 storageclass "spectrumscale-primaryfs" deleted
 ```
-
-<br>
-<br>
-<br>
-<br>
-
 
 
 ## Example 3 : Deployment fail over example
