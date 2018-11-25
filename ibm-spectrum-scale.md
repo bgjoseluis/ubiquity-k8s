@@ -1,6 +1,6 @@
 # IBM Spectrum Scale
 
-IBM Spectrum Scale can be used as persistent storage for Kubernetes via Ubiquity service. Ubiquity communicates with the IBM Spectrum Scale through IBM Spectrum Scale management api version 2.0. Filesets are created on IBM Spectrum Scale and made available for Ubiquity FlexVolume and Ubiquity Dynamic Provisioner.
+IBM Spectrum Scale can be used as persistent storage for Kubernetes via Ubiquity service. Ubiquity communicates with the IBM Spectrum Scale through IBM Spectrum Scale management api version 2. Filesets are created on IBM Spectrum Scale and made available for Ubiquity FlexVolume and Ubiquity Dynamic Provisioner.
 
 # Usage examples for Ubiquity Dynamic Provisioner and FlexVolume
 The IBM official solution for Kubernetes, based on the Ubiquity project, is referred to as IBM Storage Enabler for Containers. You can download the installation package and its documentation (including full usage examples) from [IBM Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=Software%2Bdefined%2Bstorage&product=ibm/StorageSoftware/IBM+Spectrum+Connect&release=All&platform=Linux&function=all).
