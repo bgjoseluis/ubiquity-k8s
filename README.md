@@ -17,7 +17,9 @@ Currently, the following storage systems use Ubiquity:
 
     The IBM Spectrum Scale is also supported for Kubernetes starting from Ubiquity version 2.0. Ubiquity communicate with the IBM Spectrum Scale using IBM Spectrum Scale management api version 2. For details, refer lastest `IBM Storage Enabler for Containers` documentation. 
    
-   The IBM official solution for Kubernetes, based on the Ubiquity project, is referred to as IBM Storage Enabler for Containers. You can download the installation package and its documentation from [IBM Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=Software%2Bdefined%2Bstorage&product=ibm/StorageSoftware/IBM+Spectrum+Connect&release=All&platform=Linux&function=all). For details on the IBM Storage Enabler for Containers, see the relevant sections in the Spectrum Connect user guide.
+
+
+The IBM official solution for Kubernetes, based on the Ubiquity project, is referred to as IBM Storage Enabler for Containers. You can download the installation package and its documentation from [IBM Fix Central](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=Software%2Bdefined%2Bstorage&product=ibm/StorageSoftware/IBM+Spectrum+Connect&release=All&platform=Linux&function=all). For details on the IBM Storage Enabler for Containers, see the relevant sections in the Spectrum Connect user guide.
 
 The code is provided as is, without warranty. Any issue will be handled on a best-effort basis.
 
